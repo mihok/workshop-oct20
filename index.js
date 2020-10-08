@@ -138,13 +138,13 @@ class BlockChain {
 
       this._sequence = newBlockChain.sequence;
 
-      this.broadcastLatest();
-
-    } else {
-
-      console.error('BlockChainError: received BlockChain invalid.');
+      return true;
 
     }
+
+    console.error('BlockChainError: received BlockChain invalid.');
+
+    return false;
   }
 
   generateBlock({ data }) {
@@ -245,7 +245,13 @@ class BlockChainPeerSocket {
       } else {
         console.info('BlockChainNodeWarning: received blockchain is longer than current blockchain.');
 
-        this.node.blockchain.replaceChain(receivedBlocks);
+        if (this.node.blockchain.replaceChain(receivedBlocks)) {
+          this.broadcast({
+            type: 'response',
+            message: 'Sending latest new block.',
+            data: [this.node.blockchain.lastBlock],
+          });
+        }
       }
     }
   }
