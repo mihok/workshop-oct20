@@ -1,0 +1,20 @@
+{
+  "name": "workshop-oct20",
+  "version": "1.0.0",
+  "description": "TorontoJS Workshop on building a cryptocurrency from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Mihok <mihok@torontojs.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@curveball/accesslog": "^0.2.0",
+    "@curveball/bodyparser": "^0.4.6",
+    "@curveball/browser": "^0.9.2",
+    "@curveball/controller": "^0.3.0",
+    "@curveball/core": "^0.14.2",
+    "@curveball/problem": "^0.2.2",
+    "@curveball/router": "^0.2.4"
+  }
+}
