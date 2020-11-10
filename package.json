@@ -15,6 +15,7 @@
     "@curveball/controller": "^0.3.0",
     "@curveball/core": "^0.14.2",
     "@curveball/problem": "^0.2.2",
-    "@curveball/router": "^0.2.4"
+    "@curveball/router": "^0.2.4",
+    "elliptic": "^6.5.3"
   }
 }
